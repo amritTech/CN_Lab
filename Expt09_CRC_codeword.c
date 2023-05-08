@@ -4,13 +4,13 @@
 
 char t[28],cs[28],g[30];
 int a,e,c;
-void exor()
-{
+
+void exor(){
  for(c = 1;c < N; c++)
  cs[c] = (( cs[c] == g[c])?'0':'1');
 }
-void crc()
-{
+
+void crc(){
  for(e=0;e<N;e++) cs[e]=t[e];
  do{
     if(cs[0]=='1') exor();
@@ -21,19 +21,21 @@ void crc()
  while(e<=a+N-1);
 }
 
-int main()
-{
+int main(){
  printf("\nEnter data : ");
  scanf("%s",t);
  printf("\nEnter Generating polynomial in binary : ");
  scanf("%s",g);
  a=strlen(t);
- for(e=a;e<a+N-1;e++) 
-  t[e]='0';
+ 
+ for(e=a;e<a+N-1;e++) t[e]='0';
  printf("\nAugmented data word : %s",t);
+ 
  crc();
  printf("\nChecksum is : %s",cs);
+ 
  for(e=a;e<a+N-1;e++) t[e]=cs[e-a];
-  printf("\nFinalcodeword is : %s",t);
+ printf("\nFinalcodeword is : %s",t);
+ 
  return 0;
 }
