@@ -25,19 +25,15 @@ int main()
 {
  printf("\nEnter data : ");
  scanf("%s",t);
- printf("\n----------------------------------------");
  printf("\nEnter Generating polynomial in binary : ");
  scanf("%s",g);
  a=strlen(t);
- for(e=a;e<a+N-1;e++) t[e]='0';
- printf("\n----------------------------------------");
+ for(e=a;e<a+N-1;e++) 
+  t[e]='0';
  printf("\nAugmented data word : %s",t);
- printf("\n----------------------------------------");
  crc();
  printf("\nChecksum is : %s",cs);
  for(e=a;e<a+N-1;e++) t[e]=cs[e-a];
- printf("\n----------------------------------------");
- printf("\nFinalcodeword is : %s",t);
- printf("\n----------------------------------------\n\n");
+  printf("\nFinalcodeword is : %s",t);
  return 0;
 }
