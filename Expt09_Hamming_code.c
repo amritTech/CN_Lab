@@ -26,8 +26,7 @@ int main(void){
 
  //Testing the input in binary
  for (int i=0; i<m; i++) {
-    while (!( d[i]=='0' || d[i]=='1'))
-    {
+    while (!( d[i]=='0' || d[i]=='1')){
         printf("\nPlease enter the input message in binary only.\n");
         exit(0);
     }
