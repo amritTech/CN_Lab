@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+
 struct Edge
 {int src, dest, weight;};
 struct Graph
@@ -10,6 +11,7 @@ struct Graph
     struct Edge* edge; // graph is represented as an array of edges.
 };
 // Creates a graph with V vertices and E edges
+
 struct Graph* createGraph(int V, int E)
 {
     struct Graph* graph = (struct Graph*) malloc( sizeof (struct Graph) );
