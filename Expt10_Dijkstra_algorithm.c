@@ -2,9 +2,10 @@
 #include<conio.h>
 #define INFINITY 99
 #define MAX 10
+
 voiddijkstra(int G[MAX][MAX], int n, int startnode);
-void main()
-{
+
+void main(){
     int G[MAX][MAX], i, j, n, u;
     printf("\nEnter the no. of vertices:: ");
     scanf("%d", &n);
@@ -17,8 +18,8 @@ void main()
     dijkstra(G,n,u);
     getch();
 }
-voiddijkstra(int G[MAX][MAX], int n, int startnode)
-{
+
+voiddijkstra(int G[MAX][MAX], int n, int startnode){
     int cost[MAX][MAX], distance[MAX], pred[MAX];
     int visited[MAX], count, mindistance, nextnode, i,j;
     for(i=0;i <n;i++)
