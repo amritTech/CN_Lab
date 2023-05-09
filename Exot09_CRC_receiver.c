@@ -4,10 +4,11 @@
 
 char t[28],cs[28],g[30], data[28];
 int a,e,c;
+
 void exor()
 {
  for(c = 1;c < N; c++)
- cs[c] = (( cs[c] == g[c])?'0':'1');
+   cs[c] = (( cs[c] == g[c])?'0':'1');
 }
 void crc()
 {
