@@ -35,7 +35,7 @@ voiddijkstra(int G[MAX][MAX], int n, int startnode){
         visited[i]=0;
     }
     distance[startnode]=0;
-    visited[startnode]=
+    visited[startnode]=1;
     count=1;
     while(count < n-1)
     {
